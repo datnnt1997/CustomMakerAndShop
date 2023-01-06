@@ -1,0 +1,189 @@
+/*****************************
+21 - Components - Blog
+*****************************/
+
+
+/*-- 21.00 - Blog --*/
+
+.post{
+	&__inner{
+		&:hover{
+			.item-overlay{
+				@extend %visible;
+				@extend %width100;
+				@extend %height100;
+			}
+			.blog{
+				&__media{
+					.image{
+						img{
+							@include transform(scale(1.1));
+						}
+					}
+				}
+			}
+		}
+	}
+	&__media{
+		margin-block-end: 27px;
+		@extend %posrelative;
+		@extend %overflowHidden;
+		img{
+			@include transition(all .3s .25s);
+		}
+	}
+	&__title{
+		font-size: 20px; 
+		max-width: 90%; 
+		margin-block-end: 15px;
+	}
+	&__meta{
+		.posted-on{
+			@extend %primary-color;
+			@extend %fontSize14;
+			@extend %displayInlineBlock;
+			margin-inline-end: 25px;
+		}
+		.posted-by{
+			@extend %primary-color;
+			@extend %fontSize14;
+			@extend %displayInlineBlock;
+		}
+	}
+	&__desc{
+		margin-block-start: 15px;
+	}
+	&__footer-meta{
+		@extend %flexbox;
+		@extend %justify-between;
+		@extend %align-center;
+		margin-block-start: 23px;
+		.social-share{
+			@extend %verticalFlexCenter;
+			& > span{
+				margin-inline-end: 20px;
+			}
+		}
+	}
+}
+/*-- 21.01 - Blog Details --*/
+
+.single-post{
+	margin-block-start: -315px;
+	border-block-end: 2px solid $border-color;
+	@include breakpoint(medium){
+		margin-block-start: -250px;
+	}
+	@include breakpoint(small){
+		margin-block-start: -200px;
+	}
+	&__header{
+		@extend %border-bottom;
+		margin-block-end: 32px;
+		@include breakpoint(small){
+			margin-block-end: 20px;
+		}
+	}
+	&__title{
+		font-size: 45px;
+		line-height: 1.222;
+		margin-block-end: 38px;
+		@extend %fontWeight400;
+		@extend %body-color;
+		@include breakpoint(medium){
+			font-size: 35px;
+		}
+		@include breakpoint(small){
+			font-size: 30px;
+		}
+	}
+	&__header-meta{
+		@extend %verticalFlexCenter;
+		@extend %justify-between;
+		padding-block-start: 12px;
+		padding-block-end: 10px;
+	}
+	&__info{
+		p{
+			&:not(:last-child){
+				margin-block-end: 35px;
+				@include breakpoint(small){
+					margin-block-end: 25px;
+				}
+			}
+		}
+		blockquote{
+			color: $color-shark;
+			font-size: 28px;
+			padding-block-start: 19px;
+			margin-block-end: 29px;
+  			line-height: 1.357;
+			@extend %fontWeight500;
+			@extend %textAcenter;
+			@extend %posrelative;
+			@include breakpoint(small){
+				font-size: 24px;
+			}
+			&:before{
+				@extend %posabsolute;
+				@extend %hCenter;
+				content: '\0022';
+				font-family: $body-font;
+				line-height: 0;
+				font-size: 140px;
+				color: $color-shark;
+				top: 6px;
+			}
+		}
+	}
+	&__meta{
+		@include breakpoint(small){
+			margin-block-end: 22px;
+		}
+		.posted-by{
+			border-block-end: 2px solid $border-color-2;
+			margin-block-end: 26px;
+			padding-block-end: 30px;
+			@include breakpoint(small){
+				margin-block-end: 30px;
+				padding-block-end: 23px;
+			}	
+			span{
+  				line-height: 1.846;
+  				@extend %displayBlock;
+				@extend %fontSize13;
+				@extend %fontItalic;
+				@include breakpoint(small){
+					display: inline-block;
+				}
+				&.byline{
+					color: $color-dust-gray;
+				}
+			}
+			a{
+				color: $color-dark;
+			}
+		}
+	}
+}
+
+/*-- 21.02 - Related Post --*/
+
+.related-post{
+	&__inner{
+		@extend %flexbox;
+	}
+	&__media{
+		max-width: 150px;
+		@include flex-basis(150px);
+	}
+	&__info{
+		max-width: calc(100% - 150px);
+		@include flex-basis(calc(100% - 150px));
+		padding-inline-start: 30px;
+	}
+	&__title{
+		@extend %fontSize18;
+		@extend %fontWeight500;
+	}
+}

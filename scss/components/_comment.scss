@@ -1,0 +1,95 @@
+/*****************************
+24 - Components - Comment
+*****************************/
+
+.comment{
+	&-title{
+	    margin-block-end: 27px;
+	    @extend %fontSize24;
+	}
+	&-list{
+		& > li{
+			&:last-child{
+				& > .single-comment:only-child{
+					margin-block-end: 0;
+				}
+				
+				.children{
+					& > li{
+						&:last-child{
+							.single-comment{
+								margin-block-end: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.single-comment{
+		@extend %posrelative;
+		margin-block-end: 20px;
+	}
+	&-avatar{
+		@extend %posabsolute;
+		@extend %lefttop;
+		@include breakpoint(xsmall){
+			position: relative !important;
+			margin-block-end: 10px;
+		}
+		img{
+			@extend %borderRadius50;
+		}
+	}
+	&-info{
+		margin-inline-start: 120px;
+		@extend %border;
+		@extend %borderRadius;
+		padding: 20px 30px;
+		@include breakpoint(xsmall){
+			margin-inline-start: 0;
+			padding: 15px 20px;
+		}
+	}
+	&-meta{
+		margin-block-end: 10px;
+		@extend %verticalFlexCenter;
+		@extend %justify-between;
+		@include breakpoint(xxsmall){
+			@include flex-direction(column);
+			align-items: flex-start !important;
+		}
+	}
+	&-author{
+		@extend %fontSize14;
+		a{
+			@extend %heading-color;
+			&:hover{
+				@extend %primary-color;
+			}
+		}
+	}
+	&-date{
+		@extend %fontItalic;
+		@extend %fontSize14;
+		margin-inline-end: 40px;
+	}
+	&-reply-link{
+	    @extend %primary-color;
+	    @extend %fontSize14;
+	    @extend %fontWeight700;
+	}
+	&-content{
+		p{
+			@extend %heading-color;
+		}
+	}
+	.children{
+		margin-inline-start: 20px;
+	}
+	&-reply-title{
+	    margin-block-end: 27px;
+	    @extend %fontSize24;
+	}
+}
+

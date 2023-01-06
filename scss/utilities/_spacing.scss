@@ -1,0 +1,324 @@
+/*****************************
+64 - Utilities - Spacing
+*****************************/
+
+.gutter{
+	&-10{
+		margin-inline-start: -5px;
+		margin-inline-end: -5px;
+		[class^="col"]{
+			padding-inline-start: 5px;
+			padding-inline-end: 5px;
+		}
+	}
+}
+
+
+
+// Specing In Pixel
+
+
+.m--0{
+	margin: 0;
+}
+.mb--10{
+	margin-block-end: 10px;
+}
+.mb--15{
+	margin-block-end: 15px;
+}
+.mb--20{
+	margin-block-end: 20px;
+}
+.mb--25{
+	margin-block-end: 25px;
+}
+.mb--30{
+	margin-block-end: 30px;
+}
+.mb--32{
+	margin-block-end: 32px;
+}
+.mb--35{
+	margin-block-end: 35px;
+}
+.mb--40{
+	margin-block-end: 40px;
+}
+.mb--42{
+	margin-block-end: 42px;
+}
+.mb--43{
+	margin-block-end: 43px;
+}
+.mb--45{
+	margin-block-end: 45px;
+}
+.mb--50{
+	margin-block-end: 50px;
+}
+.mb--65{
+	margin-block-end: 65px;
+}
+.mb--70{
+	margin-block-end: 70px;
+}
+.mb--75{
+	margin-block-end: 75px;
+}
+.mb--77{
+	margin-block-end: 77px;
+}
+.mb--80{
+	margin-block-end: 80px;
+}
+.mb--95{
+	margin-block-end: 95px;
+}
+.mt--50{
+	margin-block-start: 50px;
+}
+.ml--20{
+	margin-inline-start: 20px;
+}
+.ml--50{
+	margin-inline-start: 50px;
+}
+.mr--20{
+	margin-inline-end: 20px;
+}
+.mr--30{
+	margin-inline-end: 30px;
+}
+.ptb--20{
+	padding-block-start: 20px;
+	padding-block-end: 20px;
+}
+.ptb--80{
+	padding-block-start: 80px;
+	padding-block-end: 80px;
+}
+.pt--20{
+	padding-block-start: 20px;
+}
+.pt--50{
+	padding-block-start: 50px;
+}
+.pt--70{
+	padding-block-start: 70px;
+}
+.pt--75{
+	padding-block-start: 75px;
+}
+.pt--80{
+	padding-block-start: 80px;
+}
+.pt--90{
+	padding-block-start: 90px;
+}
+.pb--38{
+	padding-block-end: 38px;
+}
+.pb--60{
+	padding-block-end: 60px;
+}
+.pb--65{
+	padding-block-end: 65px;
+}
+.pb--72{
+	padding-block-end: 72px;
+}
+.pb--75{
+	padding-block-end: 75px;
+}
+.pb--80{
+	padding-block-end: 80px;
+}
+.pb--120{
+	padding-block-end: 120px;
+}
+.pl--15{
+	padding-inline-start: 15px;
+}
+.pl--30{
+	padding-inline-start: 30px;
+}
+.pl--45{
+	padding-inline-start: 45px;
+}
+.plr--15{
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
+}
+.pr--15{
+	padding-inline-end: 15px;
+}
+
+// Responsive Specing In Pixel
+
+
+@include breakpoint(xlarge){
+	.mb-xl--40{
+		margin-block-end: 40px;
+	}
+	.pt-xl--70{
+		padding-block-start: 70px;
+	}
+	.pb-xl--100{
+		padding-block-end: 100px;
+	}
+}
+
+@include breakpoint(large){
+	.mb-lg--25{
+		margin-block-end: 25px;
+	}
+	.mb-lg--50{
+		margin-block-end: 50px;
+	}
+	.pt-lg--95{
+		padding-block-start: 95px;
+	}
+	.pl-lg--0{
+		padding-inline-start: 0;
+	}
+	.pl-lg--30{
+		padding-inline-start: 30px;
+	}
+	.pb-lg--95{
+		padding-block-end: 95px;
+	}
+}
+@include breakpoint(medium){
+	.mt-md--40{
+		margin-block-start: 40px;
+	}
+	.mt-md--50{
+		margin-block-start: 50px;
+	}
+	.mb-md--10{
+		margin-block-end: 10px;
+	}
+	.mb-md--20{
+		margin-block-end: 20px;
+	}
+	.mb-md--30{
+		margin-block-end: 30px;
+	}
+	.mb-md--33{
+		margin-block-end: 33px;
+	}
+	.mb-md--40{
+		margin-block-end: 40px;
+	}
+	.mb-md--50{
+		margin-block-end: 50px;
+	}
+	.mb-md--55{
+		margin-block-end: 55px;
+	}
+	.mb-md--57{
+		margin-block-end: 57px;
+	}
+	.pl-md--0{
+		padding-inline-start: 0;
+	}
+	.pr-md--0{
+		padding-inline-end: 0;
+	}
+	.pt-md--40{
+		padding-block-start: 40px;
+	}
+	.pt-md--55{
+		padding-block-start: 55px;
+	}
+	.pt-md--60{
+		padding-block-start: 60px;
+	}
+	.pb-md--55{
+		padding-block-end: 55px;
+	}
+	.pb-md--60{
+		padding-block-end: 60px;
+	}
+	.pl-md--0{
+		padding-inline-start: 0;
+	}
+}
+
+@include breakpoint(small){
+	.mb-sm--15{
+		margin-block-end: 15px;
+	}
+	.mb-sm--20{
+		margin-block-end: 20px;
+	}
+	.mb-sm--25{
+		margin-block-end: 25px;
+	}
+	.mb-sm--30{
+		margin-block-end: 30px;
+	}
+	.mb-sm--33{
+		margin-block-end: 33px;
+	}
+	.mb-sm--40{
+		margin-block-end: 40px;
+	}
+	.mb-sm--42{
+		margin-block-end: 42px;
+	}
+	.mb-sm--45{
+		margin-block-end: 45px;
+	}
+	.mb-sm--50{
+		margin-block-end: 50px;
+	}
+	.pb-sm--28{
+		padding-block-end: 28px;
+	}
+	.pb-sm--90{
+		padding-block-end: 90px;
+	}
+	.pl-sm--15{
+		padding-inline-start: 15px;
+	}
+}
+@include breakpoint(xsmall){
+	.mb-xs--10{
+		margin-block-end: 10px;
+	}
+	.mb-xs--15{
+		margin-block-end: 15px;
+	}
+	.mb-xs--30{
+		margin-block-end: 30px;
+	}
+	.mb-xs--33{
+		margin-block-end: 33px;
+	}
+	.ml-xs--0{
+		margin-inline-start: 0;
+	}
+	.mr-xs--0{
+		margin-inline-end: 0;
+	}
+	.pt-xs--60{
+		padding-block-start: 60px;
+	}
+	.pb-xs--49{
+		padding-block-end: 49px;
+	}
+}
+
+
+
+// Specing In Rem 
+
+.mb--10pt8{
+	margin-block-end: 10.8rem;
+}
+.mb--11pt5{
+	margin-block-end: 11.5rem;
+}
+

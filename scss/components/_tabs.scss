@@ -1,0 +1,105 @@
+/*****************************
+33 - Components - Tabs
+*****************************/
+
+
+/*-- 33.02 - Tab Style 02 --*/
+
+.tab-style-1{
+	.nav{
+		&-tabs{
+			padding-block-end: 20px;
+			@include breakpoint(xsmall){
+				@include flex-direction(column);
+			}
+		}
+		&-link{
+			border-color: #dddddd;
+			@include breakpoint(large){
+				font-size: $body-font-size;
+			}
+			&:not(:last-child){
+				margin-inline-end: 5px;
+			}
+			@include breakpoint(xsmall){
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*-- 33.02 - User Dashboard Tab --*/
+
+.user-dashboard-tab{
+	@extend %flexbox;
+	@extend %align-start;
+	&__head{
+		background-color: $color-mercury;
+		padding: 15px 0;
+		@include flex-basis(190px);
+		max-width: 190px;
+		margin-inline-end: 30px;
+		@include breakpoint(small){
+			@include flex-basis(100%);
+			max-width: 100%;
+			width: 100%;
+			margin-inline-end: 0;
+			margin-block-end: 30px;
+			padding: 0;
+		}
+		.nav-link{
+		    padding: 10px 30px;
+			border: none;
+			background: transparent;
+			text-align: start;
+		    @extend %displayBlock;
+		    @extend %body-color;
+		    @include breakpoint(small){
+		    	padding: 12px;
+		    }
+			&.active, 
+			&:hover{
+				@extend %primary-bg-color;
+				@extend %white-color;
+			}
+		}
+	}
+
+	&__content{
+		@include flex-basis(calc(100% - 220px));
+		max-width: calc(100% - 220px);
+		@include breakpoint(small){
+			@include flex-basis(100%);
+			max-width: 100%;
+			width: 100%;
+		}
+		p{
+			a{
+				&:hover{
+					@extend %textDunder;
+				}
+			}
+		}
+	}
+}
+
+/*-- 33.04 - Tab Content --*/
+
+.tab-content {
+    width: 100%;
+    .tab-pane {
+        display: none;
+        height: 0;
+        max-width: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        &.active {
+        	display: block;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+            overflow: visible;
+        }
+    }
+}

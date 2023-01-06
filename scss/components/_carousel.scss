@@ -1,0 +1,271 @@
+/*****************************
+23 - Components - Carousel
+*****************************/
+
+/*-- 23.00 - Carousel Gutter --*/
+
+.slick{
+	&-gutter{
+		&-10{
+			.slick-list{
+				margin-inline-start: -5px;
+				margin-inline-end: -5px;
+				.slick-slide{
+					padding-inline-start: 5px;
+					padding-inline-end: 5px;
+				}
+			}
+			&.slick-vertical{
+				.slick-list{
+					margin-inline-start: 0;
+					margin-inline-end: 0;
+					margin-block-start: -5px;
+					margin-block-end: -5px;
+					.slick-slide{
+						padding-block-start: 5px;
+						padding-block-end: 5px;
+						padding-inline-start: 0;
+						padding-inline-end: 0;
+					}
+				}
+			}
+		}
+		&-25{
+			.slick-list{
+				margin-inline-start: -12.5px;
+				margin-inline-end: -12.5px;
+				.slick-slide{
+					padding-inline-start: 12.5px;
+					padding-inline-end: 12.5px;
+				}
+			}
+			&.slick-vertical{
+				.slick-list{
+					margin-block-start: -12.5px;
+					margin-block-end: -12.5px;
+					margin-inline-start: 0;
+					margin-inline-end: 0;
+					.slick-slide{
+						padding-block-start: 12.5px;
+						padding-block-end: 12.5px;
+						padding-inline-start: 0;
+						padding-inline-end: 0;
+					}
+				}
+			}
+		}
+		&-30{
+			.slick-list{
+				margin-inline-start: -15px;
+				margin-inline-end: -15px;
+				.slick-slide{
+					padding-inline-start: 15px;
+					padding-inline-end: 15px;
+				}
+			}
+			&.slick-vertical{
+				.slick-list{
+					margin-block-start: -15px;
+					margin-block-end: -15px;
+					margin-inline-start: 0;
+					margin-inline-end: 0;
+					.slick-slide{
+						padding-block-start: 15px;
+						padding-block-end: 15px;
+						padding-inline-start: 0;
+						padding-inline-end: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*-- 23.01 - Slick Dot Margin Top --*/
+
+.slick-dot-mt-40{
+	.slick-dots{
+		margin-block-start: 40px !important;
+	}
+}
+
+/*-- 23.02 - Carousel Dots --*/
+
+.slick{
+	&-dots{
+		@extend %posrelative;
+		@extend %textAcenter;
+		line-height: 0;
+		li{
+		    @extend %posrelative;
+		    @extend %displayInlineBlock;
+		    @extend %cursorPointer;
+			@extend %basetransition;
+			@extend %primary-bg-color;
+			@extend %padding-0;
+			margin: 0 3px;
+			opacity: .4;
+			@include transform(scale(.8));
+			@include circle(8);
+			button{
+			    font-size: 0;
+				@extend %padding-0;
+			    @extend %displayBlock;
+			    @extend %width100;
+			    @extend %height100;
+			    @extend %cursorPointer;
+			    @extend %border-none;
+			    @extend %transparent-bg;
+			    @extend %basetransition;
+			}
+			&.slick-active{
+				opacity: 1;
+				@include transform(scale(1));
+			}
+		}
+	}
+}
+
+
+/*-- 23.03 - Carousel Navs --*/
+
+.slick{
+	&-btn{
+		@extend %posabsolute;
+		@extend %textAcenter;
+		@extend %cursorPointer;
+		width: 65px;
+		height: 50px;
+		line-height: 50px;
+		background-color: rgba($color-white, .6);
+		z-index: 1;
+		i{
+			color: #585e66;
+			@extend %fontSize24;
+			@extend %linheightInherit;
+		}
+	}
+	&-right-bottom{
+		.slick{
+			&-btn{
+				right: 50px;
+				bottom: 30px;
+			} 
+			&-prev{
+				right: 115px;
+				border-inline-end: 1px solid #dfe9f0;
+			}
+		}
+	}
+	&-center-bottom{
+		.slick{
+			&-btn{
+				@extend %bottom-0;
+				@extend %hCenter;
+			} 
+			&-prev{
+				margin-inline-start: -25px;
+				@include breakpoint(xsmall){
+					left: 20px;
+					margin-inline-start: 0;
+				}
+			}
+			&-next{
+			    margin-inline-end: -25px;
+				@include breakpoint(xsmall){
+					right: 0;
+					left: auto;
+					margin-inline-end: 0;
+				}
+			}	
+		}
+	}
+	&-vertical-center{
+		.slick{
+			&-btn{
+				@extend %vCenter;
+			}
+			&-prev{
+				@extend %left-0;
+			}
+			&-next{
+				@extend %right-0;
+			}
+		}
+	}
+	&-horizontal-center{
+		.slick{
+			&-btn{
+				@extend %vCenter;
+			}
+			&-prev{
+				@extend %left-0;
+			}
+			&-next{
+				@extend %right-0;
+			}
+		}
+	}
+}
+
+/*-- 23.04 - Product Slide Nav --*/
+
+.product-slide-nav{
+	.slick{
+		&-btn{
+			@extend %widthAuto;
+			@extend %heightAuto;
+			@extend %lineheight1;
+			@extend %transparent-bg;
+			.fa-angle{
+				&-up{
+					&:before{
+						@include breakpoint(small){
+							content:"\f104";
+						}
+					}
+				}
+				&-down{
+					&:before{
+						@include breakpoint(small){
+							content:"\f105";
+						}
+					}
+				}
+			}
+		}
+	}
+	&.slick-center-bottom{
+		.slick{
+			&-btn{
+				@include breakpoint(small){
+					top: 50%;
+					@include transform(translate(0, -50%));
+					bottom: auto;
+				}
+			}
+			&-prev{
+				@include breakpoint(small){
+					left: 5px;
+				}
+			}
+			&-next{
+				@include breakpoint(small){
+					right: 5px;
+				}
+			}
+		}
+	}
+}
+
+
+/*-- 23.05 - Slider Dots Position --*/
+
+.homepage-slider{
+	.slick-dots{
+		@extend %posabsolute;
+		@extend %width100;
+		bottom: 20px;
+	}
+}
