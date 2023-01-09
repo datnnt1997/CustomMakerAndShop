@@ -1,0 +1,105 @@
+.btn-toolbar {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-shadow: 0 1px 9px 1px #cccccc;
+    display: inline-block;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.btn-group {
+    margin-bottom: 10px;
+    background-color: transparent;
+    display: inline-block;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-shadow: 0 1px 9px 1px #cccccc;
+    padding: 4px
+}
+
+.btn-group-label {
+    clear: both;
+    color: #555555;
+    display: block;
+    font-family: "Open sans";
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px #ffffff;
+    text-transform: capitalize;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+.design-btn {
+  clear: both;
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: auto;
+  color: #ffffff;
+  box-shadow: #999999 0px 0px 0px 0px;
+  border: none;
+
+}
+
+.type-design-btn {
+	width: 60px;
+    padding: 4px;
+	margin: 3px !important;
+	background-color: transparent;
+}
+
+.color-design-btn {
+    border: solid 1px #cccccc;
+	width: 23px;
+	height: 23px;
+    padding: 0px;
+	margin: 2px !important;
+	background-clip: content-box;
+	border-radius: 0px
+}
+
+.leftLayout .color-design-btn.active, .leftLayout .type-design-btn.active {
+    border: solid 2px blue;
+    border-radius: 30%;
+}
+
+.menu-left {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0
+}
+
+.menu-left li {
+    border-bottom: 1px solid #CCCCCC;
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.menu-left li a {
+    display: block;
+    font-family: "Open sans";
+    line-height: 20px;
+    outline: medium none;
+    padding: 8px 10px;
+}
+.menu-left li a.active {
+    background-color: #007AFF;
+    color: #fff;
+    text-shadow: 1px 1px 1px #666;
+}
+
+[data-toggle="buttons"] > .design-btn > input[type="radio"],
+[data-toggle="buttons"] > .design-btn > input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
