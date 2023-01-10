@@ -384,7 +384,7 @@ a:focus {
     margin-right: 2px;
 	width: 38px;
     padding: 6px;
-    border-radius: 0 !important;
+    border-radius: 0;
 }
 
 .texttoolbox .input-group {

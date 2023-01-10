@@ -1,6 +1,13 @@
 .design-col {
     position: relative;
 }
+
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1500px !important;
+}
+
 /* leftLayout */
 .left_layout {
 	width: 100%;
@@ -143,13 +150,16 @@
 /* rightLayout */
 .canvas_tool_box {
     padding-bottom: 15px;
-	display: block;
 	width: 100%;
+    text-align: center;
+    display: none;
 }
 
 .text_tool_box {
 	padding-bottom: 15px;
 	display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .canvas_tool_box .btn-group {
@@ -170,4 +180,41 @@
     height: 28px;
     margin: 3px;
     min-width: auto;
+}
+
+.non-btn {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    background-color: transparent;
+    color: #333;
+    display: inline-block;
+    border: 1px solid transparent;
+    width: 28px;
+    height: 28px;
+    margin: 3px;
+    min-width: auto;
+}
+
+.tool-design-checkbox {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 5px !important;
+    background-color: #fff;
+    color: #333;
+    display: inline-block;
+    border: 1px solid black;
+    width: 28px !important;
+    height: 28px !important;
+    margin: 3px;
+    min-width: auto;
+}
+
+[data-toggle="buttons"] > .btn > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  filter: alpha(opacity=0);
+  opacity: 0;
 }

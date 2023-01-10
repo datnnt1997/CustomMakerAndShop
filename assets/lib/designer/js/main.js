@@ -13,7 +13,7 @@ $(function() {
         "2":{
             "filename":"women",
             "color":[
-                {"id":"3","filename":"black","color":"000000"},
+                {"id":"3","filename":"white","color":"ffffff"},
                 {"id":"4","filename":"white","color":"ffffff"}
             ]
         }
@@ -40,7 +40,7 @@ $(function() {
     resizeAll();
     
     // Add demo objects
-    fabric.Image.fromURL('images/album/image1.png', function(oImg) {
+    fabric.Image.fromURL('assets/lib/designer/images/album/image1.png', function(oImg) {
         canvas.add(oImg);
         oImg.scaleToWidth(canvas.get('width')*0.8);
         oImg.viewportCenter().setCoords();
@@ -62,7 +62,7 @@ $(function() {
             cornerSize: intCornerSize
         });
         check_image_scale(options);
-        $('.cvtoolbox', '#centerLayoutContainer').show();
+        $('.canvas_tool_box', '#rightLayoutContainer').show();
         if (options.target.isType('i-text')) {
             prepare_texttoolbox(options.target);
             $('.texttoolbox', '#rightLayoutContainer').show();
@@ -75,7 +75,7 @@ $(function() {
     canvas_front.on('selection:cleared', event_selection_cleared);
     canvas_back.on('selection:cleared', event_selection_cleared);
     function event_selection_cleared(options) {
-        $('.cvtoolbox', '#centerLayoutContainer').hide();
+        $('.canvas_tool_box', '#rightLayoutContainer').hide();
         $('.cvtoolbox_info', '#centerLayoutContainer').hide();
         $('.texttoolbox', '#rightLayoutContainer').hide();
     };
@@ -285,7 +285,7 @@ $(function() {
             $('#div_colors').html(data).show();
         }
         
-        $('#img_shirt').attr('src', 'images/shirts/'+shirtData[this.value]['filename']+'_'+shirtData[this.value]['color'][0]['filename']+'_'+shirtSide+'.png');
+        $('#img_shirt').attr('src', 'assets/lib/designer/images/shirts/'+shirtData[this.value]['filename']+'_'+shirtData[this.value]['color'][0]['filename']+'_'+shirtSide+'.png');
         return false;
     });
     
@@ -456,42 +456,45 @@ $(function() {
 
     // render the toolbox
     function prepare_texttoolbox(obj) {
-        var data = '<div class="btn-group" data-toggle="buttons">';
+        var data = '<div class="btn-group" data-toggle="buttons" style="text-align: center; padding: 5px"> <div class="btn-group-label">Kiểu Chữ</div>';
         if (obj.get('fontWeight')=='bold') {
-            data += '<label class="btn btn-default active" id="texttoolbox_bold"><input type="checkbox" autocomplete="off" istool="bold" checked><i class="fa fa-bold"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox active" id="texttoolbox_bold"><input type="checkbox" autocomplete="off" istool="bold" checked><i class="fa fa-bold"></i></label>';
         } else {
-            data += '<label class="btn btn-default" id="texttoolbox_bold"><input type="checkbox" autocomplete="off" istool="bold"><i class="fa fa-bold"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox" id="texttoolbox_bold"><input type="checkbox" autocomplete="off" istool="bold"><i class="fa fa-bold"></i></label>';
         }
         
         if (obj.get('fontStyle')=='italic') {
-            data += '<label class="btn btn-default active" id="texttoolbox_italic"><input type="checkbox" autocomplete="off" istool="italic" checked><i class="fa fa-italic"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox active" id="texttoolbox_italic"><input type="checkbox" autocomplete="off" istool="italic" checked><i class="fa fa-italic"></i></label>';
         } else {
-            data += '<label class="btn btn-default" id="texttoolbox_italic"><input type="checkbox" autocomplete="off" istool="italic"><i class="fa fa-italic"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox" id="texttoolbox_italic"><input type="checkbox" autocomplete="off" istool="italic"><i class="fa fa-italic"></i></label>';
         }
         
         if (obj.get('underline')) {
-            data += '<label class="btn btn-default active" id="texttoolbox_underline"><input type="checkbox" autocomplete="off" istool="underline" checked><i class="fa fa-underline"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox active" id="texttoolbox_underline"><input type="checkbox" autocomplete="off" istool="underline" checked><i class="fa fa-underline"></i></label>';
         } else {
-            data += '<label class="btn btn-default" id="texttoolbox_underline"><input type="checkbox" autocomplete="off" istool="underline"><i class="fa fa-underline"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox" id="texttoolbox_underline"><input type="checkbox" autocomplete="off" istool="underline"><i class="fa fa-underline"></i></label>';
         }
         
         if (obj.get('linethrough')) {
-            data += '<label class="btn btn-default active" id="texttoolbox_strikethrough"><input type="checkbox" autocomplete="off" istool="strikethrough" checked><i class="fa fa-strikethrough"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox active" id="texttoolbox_strikethrough"><input type="checkbox" autocomplete="off" istool="strikethrough" checked><i class="fa fa-strikethrough"></i></label>';
         } else {
-            data += '<label class="btn btn-default" id="texttoolbox_strikethrough"><input type="checkbox" autocomplete="off" istool="strikethrough"><i class="fa fa-strikethrough"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox" id="texttoolbox_strikethrough"><input type="checkbox" autocomplete="off" istool="strikethrough"><i class="fa fa-strikethrough"></i></label>';
         }
         
         if (obj.isEditing) {
-            data += '<label class="btn btn-default active" id="texttoolbox_edit"><input type="checkbox" autocomplete="off" istool="edit" checked><i class="fa fa-pencil-square-o fa-lg"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox active" id="texttoolbox_edit"><input type="checkbox" autocomplete="off" istool="edit" checked><i class="fa fa-pencil-square-o fa-lg"></i></label>';
         } else {
-            data += '<label class="btn btn-default" id="texttoolbox_edit"><input type="checkbox" autocomplete="off" istool="edit"><i class="fa fa-pencil-square-o fa-lg"></i></label>';
+            data += '<label class="btn btn-default tool-design-checkbox" id="texttoolbox_edit"><input type="checkbox" autocomplete="off" istool="edit"><i class="fa fa-pencil-square-o fa-lg"></i></label>';
         }
-        data += '</div>';
-        data += '<div class="input-group colorpicker-component" id="texttoolbox_color">';
-        data += 'Text color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="btn btn-default add-on"><i></i></span>';
+
+        data += '<div class="input-group colorpicker-component " id="texttoolbox_color">';
+        data += '<div class="btn-group-label" style="margin-right: 10px">Vị trí</div>';
+        data += '<span class="btn btn-default tool-design-checkbox add-on" style="padding: 0px"><i style="margin: 0px; width: 90%; height: 90%; border-radius: 5px"></i></span>';
         data += '</div>';
         data += '<div class="input-group">';
-        data += 'Font&nbsp;<select id="texttoolbox_font" style="width: calc(100% - 40px);"><option value="Times New Roman">Times New Roman</option><option value="Pacifico">Pacifico</option><option value="VT323">VT323</option><option value="Quicksand">Quicksand</option><option value="Inconsolata">Inconsolata</option></select>';
+        data += '<div class="btn-group-label" style="margin-right: 10px">Font</div>';
+        data += '<select id="texttoolbox_font" style="width: calc(100% - 40px); background-color: transparent; border-radius: 5px"><option value="Times New Roman">Times New Roman</option><option value="Pacifico">Pacifico</option><option value="VT323">VT323</option><option value="Quicksand">Quicksand</option><option value="Inconsolata">Inconsolata</option></select>';
+        data += '</div>';
         data += '</div>';
         $('.texttoolbox', '#rightLayoutContainer').html(data);
         $('#texttoolbox_color').colorpicker({
