@@ -1397,7 +1397,7 @@ pre code {
   margin-left: auto;
 }
 @media (min-width: 768px) {
-  .container {
+  .container {-
     width: 750px;
   }
 }

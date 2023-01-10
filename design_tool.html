@@ -16,206 +16,133 @@
     <link rel="stylesheet" href="assets/lib/designer/css/font-awesome/css/font-awesome.min.css">
 <!--    <link rel="stylesheet" href="assets/lib/designer/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="assets/lib/designer/js/colorpicker/css/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="assets/lib/designer/css/style.min.css">
+    <link rel="stylesheet" href="assets/lib/designer/css/style.css">
 
 
 </head>
 <body>
-    <div class="container">
-        <div class="wrapper">
-          <div class="page-content-inner pt--80 pt-md--60">
-            <div id="wrap">
-                <div class="container-fluid">
-                    <div class="row">
+    <div id="wrap">
+        <div class="container-fluid">
+            <div class="row">
 
-                        <!-- left column -->
-                        <div class="col-md-3">
-                            <div class="leftLayout" id="leftLayoutContainer">
-                                <!-- Phôi áo -->
-                                <div class="btn-group" data-toggle="buttons">
-                                    <div class="btn-group-label">Chọn phôi</div>
-                                    <div class="btn design-btn type-design-btn active">
-                                        <input type="radio" name="form_shirt_type" value="1" autocomplete="off" checked />
-                                        <img src="assets/lib/designer/images/shirts/men1_blue_front.png" /><br/>
-                                    </div>
-                                    <div class="btn design-btn type-design-btn">
-                                        <input type="radio" name="form_shirt_type" value="2" autocomplete="off" />
-                                        <img src="assets/lib/designer/images/shirts/men1_white_front.png" /><br/>
-                                    </div>
-                                    <div class="btn design-btn type-design-btn">
-                                        <input type="radio" name="form_shirt_type" value="3" autocomplete="off" />
-                                        <img src="assets/lib/designer/images/shirts/men2_black_front.png" /><br/>
-                                    </div>
-                                </div>
-
-                                <!-- Màu áo -->
-                                <div class="btn-group" data-toggle="buttons" id="div_colors" >
-                                    <div class="btn-group-label">Chọn màu</div>
-                                    <div class="btn design-btn color-design-btn active" style="background-color: #000000;">
-                                        <input type="radio" name="form_shirt_color" value="1" autocomplete="off" checked />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #ffffff;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #ffa500;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #ff0000;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #c0c0c0;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #660099;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #800000;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #00ab6b;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                    <div class="btn design-btn color-design-btn" style="background-color: #30d5c8;">
-                                        <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
-                                    </div>
-                                </div>
-
-                                <!-- Tools -->
-                                <div class="btn-toolbar">
-                                    <ul class="menu-left">
-                                        <li>
-                                            <a id="btn_addtext"><i class="fa fa-font"></i>&nbsp;&nbsp;Thêm văn bản</a>
-                                        </li>
-                                        <li>
-                                            <iframe id="ifr_upload" name="ifr_upload" height="0" width="0" frameborder="0"></iframe>
-                                            <form id="frm_upload" action="" method="post" enctype="multipart/form-data" target="ifr_upload">
-                                                <input type="file" id="upload-image" name="image_upload" accept=".gif,.jpg,.jpeg,.png,.ico" style="display: none;">
-                                                <a id="uploadimagelink"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;Upload ảnh</a>
-
-                                            </form>
-                                        </li>
-                                        <li>
-                                            <a data-target="#albumModal" data-toggle="modal" ><i class="fa fa-th"></i>&nbsp;&nbsp;Chọn ảnh từ thư viện</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                <!-- left column -->
+                <div class="col-xl-3 design-col">
+                    <div class="left_layout" id="leftLayoutContainer">
+                        <!-- Phôi áo -->
+                        <div class="btn-group" data-toggle="buttons">
+                            <div class="btn-group-label">Chọn phôi</div>
+                            <div class="btn design-btn type-design-btn active">
+                                <input type="radio" name="form_shirt_type" value="1" autocomplete="off" checked />
+                                <img src="assets/lib/designer/images/shirts/men1_blue_front.png" /><br/>
+                            </div>
+                            <div class="btn design-btn type-design-btn">
+                                <input type="radio" name="form_shirt_type" value="2" autocomplete="off" />
+                                <img src="assets/lib/designer/images/shirts/men1_white_front.png" /><br/>
+                            </div>
+                            <div class="btn design-btn type-design-btn">
+                                <input type="radio" name="form_shirt_type" value="3" autocomplete="off" />
+                                <img src="assets/lib/designer/images/shirts/men2_black_front.png" /><br/>
                             </div>
                         </div>
 
-                        <!-- center column -->
-                        <div class="col-md-8">
-                            <div class="centerLayout" id="centerLayoutContainer">
-                             <div class="shirt"><img src="assets/lib/designer/images/shirts/men1_blue_front.png" id="img_shirt" /></div>
-                                <div class="cvtoolbox">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default" id="toolbox_centerh" style="min-width: auto"><i class="fa fa-arrows-h fa-lg"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_up" style="min-width: auto"><i class="fa fa-arrow-up"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_centerv" style="min-width: auto"><i class="fa fa-arrows-v fa-lg"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_flipx" style="min-width: auto"><i class="fa fa-road fa-lg"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_flipy" style="min-width: auto"><i class="fa fa-road fa-lg fa-rotate-90"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_remove" style="min-width: auto"><i class="fa fa-trash-o fa-lg"></i></button>
-                                    </div>
-                                </div>
-                                <div class="cvtoolbox cvtoolbox_2nd">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default" id="toolbox_left" style="min-width: auto"><i class="fa fa-arrow-left"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_center" style="min-width: auto"><i class="fa fa-arrows fa-lg"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_right" style="min-width: auto"><i class="fa fa-arrow-right"></i></button>
-                                        <button type="button" class="btn btn-default nobtn" style="min-width: auto">&nbsp;</button>
-                                        <button type="button" class="btn btn-default nobtn" style="min-width: auto">&nbsp;</button>
-                                        <button type="button" class="btn btn-default nobtn" style="min-width: auto">&nbsp;</button>
-                                    </div>
-                                </div>
-                                <div class="cvtoolbox cvtoolbox_3rd">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default" id="toolbox_totop" style="min-width: auto"><i class="fa fa-step-backward fa-lg fa-rotate-90"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_down" style="min-width: auto"><i class="fa fa-arrow-down"></i></button>
-                                        <button type="button" class="btn btn-default" id="toolbox_tobottom" style="min-width: auto"><i class="fa fa-step-forward fa-lg fa-rotate-90"></i></button>
-                                        <button type="button" class="btn btn-default nobtn" style="min-width: auto">&nbsp;</button>
-                                        <button type="button" class="btn btn-default nobtn" style="min-width: auto">&nbsp;</button>
-                                        <button type="button" class="btn btn-default nobtn" style="min-width: auto">&nbsp;</button>
-                                    </div>
-                                </div>
-                                <div class="cvtoolbox_info"><div><span></span></div></div>
-<!--                                <div id="div_canvas_front" style="margin-top: 155px;">-->
-<!--                                    <canvas id="mainCanvas_front" width="260" height="350" class="shirt_canvas"></canvas>-->
-<!--                                </div>-->
-<!--                                <div id="div_canvas_back" style="margin-top: 155px;">-->
-<!--                                    <canvas id="mainCanvas_back" width="260" height="350" class="shirt_canvas"></canvas>-->
-<!--                                </div>-->
-<!--                                <div class="btn-group twosides" data-toggle="buttons">-->
-<!--                                    <div class="btn active">-->
-<!--                                        <input type="radio" name="form_shirt_side" value="front" autocomplete="off" checked />-->
-<!--                                        <div class="sidename"><i class="fa fa-bookmark-o"></i> Front</div>-->
-<!--                                    </div>-->
-<!--                                    <div class="btn">-->
-<!--                                        <input type="radio" name="form_shirt_side" value="back" autocomplete="off" />-->
-<!--                                        <div class="sidename"><i class="fa fa-bookmark"></i> Back</div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="div_reviewbtn">-->
-<!--                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#reviewModal" ><i class="fa fa-eye"></i> Preview</button>-->
-<!--                                    <a class="btn btn-default" id="btnDownload"><i class="fa fa-save"></i> Download</a>-->
-<!--                                </div>-->
+                        <!-- Màu áo -->
+                        <div class="btn-group" data-toggle="buttons" id="div_colors" >
+                            <div class="btn-group-label">Chọn màu</div>
+                            <div class="btn design-btn color-design-btn active" style="background-color: #000000;">
+                                <input type="radio" name="form_shirt_color" value="1" autocomplete="off" checked />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #ffffff;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #ffa500;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #ff0000;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #c0c0c0;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #660099;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #800000;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #00ab6b;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
+                            </div>
+                            <div class="btn design-btn color-design-btn" style="background-color: #30d5c8;">
+                                <input type="radio" name="form_shirt_color" value="2" autocomplete="off" />
                             </div>
                         </div>
 
-                        <!-- right column -->
-                        <div class="col-md-2">
-                            <div class="rightLayout" id="rightLayoutContainer">
-                                <div class="texttoolbox">
-                                </div>
-                                <div class="message">
-                                </div>
+                        <!-- Tools -->
+                        <div class="btn-toolbar">
+                            <ul class="menu-left">
+                                <li>
+                                    <a id="btn_addtext"><i class="fa fa-font"></i>&nbsp;&nbsp;Thêm văn bản</a>
+                                </li>
+                                <li>
+                                    <iframe id="ifr_upload" name="ifr_upload" height="0" width="0" frameborder="0"></iframe>
+                                    <form id="frm_upload" action="" method="post" enctype="multipart/form-data" target="ifr_upload">
+                                        <input type="file" id="upload-image" name="image_upload" accept=".gif,.jpg,.jpeg,.png,.ico" style="display: none;">
+                                        <a id="uploadimagelink"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;Upload ảnh</a>
+
+                                    </form>
+                                </li>
+                                <li>
+                                    <a data-target="#albumModal" data-toggle="modal" ><i class="fa fa-th"></i>&nbsp;&nbsp;Chọn ảnh từ thư viện</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- center column -->
+                <div class="col-xl-6 design-col">
+                    <div class="center_layout" id="centerLayoutContainer">
+                        <div class="shirt">
+                            <img src="assets/lib/designer/images/shirts/men1_blue_front.png" id="img_shirt" />
+                        </div>
+                         <div id="div_canvas_front" style="margin-top: 155px;">
+                            <canvas id="mainCanvas_front" width="260" height="350" class="shirt_canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right column -->
+                <div class="col-xl-3 design-col">
+                    <div class="right_layout" id="rightLayoutContainer">
+                        <div class="canvas_tool_box">
+                            <div class="btn-group" data-toggle="buttons">
+                                <div class="btn-group-label">Vị trí</div>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_centerh"><i class="fa fa-arrows-h fa-lg"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_up"><i class="fa fa-arrow-up"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_centerv"><i class="fa fa-arrows-v fa-lg"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_left"><i class="fa fa-arrow-left"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_center"><i class="fa fa-arrows fa-lg"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_right"><i class="fa fa-arrow-right"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_flipx"><i class="fa fa-road fa-lg"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_down"><i class="fa fa-arrow-down"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_flipy"><i class="fa fa-road fa-lg fa-rotate-90"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_totop"><i class="fa fa-step-backward fa-lg fa-rotate-90"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_tobottom"><i class="fa fa-step-forward fa-lg fa-rotate-90"></i></button>
+                                <button type="button" class="btn btn-default tool-design-btn" id="toolbox_remove" style="color: red;"><i class="fa fa-trash-o fa-lg"></i></button>
                             </div>
+                        </div>
+                        <div class="texttoolbox">
+                            <div class="btn-group" data-toggle="buttons">
+
+                            </div>
+                        </div>
+                        <div class="message">
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Preview Modal -->
-            <div id="reviewModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">&nbsp;</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="shirt"><img src="" /></div>
-                    <div class="shirtdesign"><img src="" /></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Album Modal -->
-            <div id="albumModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Album</h4>
-                  </div>
-                  <div class="modal-body">
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image1.png)"><img bgsrc="images/album/image1.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image2.png)"><img bgsrc="images/album/image2.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image3.png)"><img bgsrc="images/album/image3.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image4.png)"><img bgsrc="images/album/image4.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image5.png)"><img bgsrc="images/album/image5.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image6.png)"><img bgsrc="images/album/image6.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image7.png)"><img bgsrc="images/album/image7.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image8.png)"><img bgsrc="images/album/image8.png" src="images/blank.png" /></div></a>
-                    <a href="#" class="album-item"><div style="background-image: url(images/album/image9.png)"><img bgsrc="images/album/image9.png" src="images/blank.png" /></div></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    <div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="assets/lib/designer/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/lib/designer/js/bootstrap.min.js"></script>
