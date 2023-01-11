@@ -86,7 +86,7 @@
                                     </form>
                                 </li>
                                 <li>
-                                    <a data-target="#albumModal" data-toggle="modal" ><i class="fa fa-th"></i>&nbsp;&nbsp;Chọn ảnh từ thư viện</a>
+                                    <a data-bs-target="#albumModal" data-bs-toggle="modal" ><i class="fa fa-th"></i>&nbsp;&nbsp;Chọn ảnh từ thư viện</a>
                                 </li>
                             </ul>
                         </div>
@@ -99,9 +99,30 @@
                         <div class="shirt">
                             <img src="assets/lib/designer/images/shirts/men1_blue_front.png" id="img_shirt" />
                         </div>
+
                          <div id="div_canvas_front" style="margin-top: 155px;">
                             <canvas id="mainCanvas_front" width="260" height="350" class="shirt_canvas"></canvas>
                         </div>
+                        <div id="div_canvas_back" style="margin-top: 155px;">
+                            <canvas id="mainCanvas_back" width="260" height="350" class="shirt_canvas"></canvas>
+                        </div>
+
+                        <div class="btn-group top-two-sides" data-toggle="buttons">
+                            <div class="btn active">
+                                <input type="radio" name="form_shirt_side" value="front" autocomplete="off" checked />
+                                <div class="sidename"><i class="fa fa-bookmark-o"></i> Front</div>
+                            </div>
+                            <div class="btn">
+                                <input type="radio" name="form_shirt_side" value="back" autocomplete="off" />
+                                <div class="sidename"><i class="fa fa-bookmark"></i> Back</div>
+                            </div>
+                        </div>
+
+                        <div class="btn-group bot-two-sides">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#reviewModal"><i class="fa fa-eye"></i> Preview</button>
+                            <a class="btn btn-default" id="btnDownload"><i class="fa fa-save"></i> Download</a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -134,9 +155,51 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
+    <!-- Preview Modal -->
+		<div id="reviewModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">&nbsp;</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="shirt"><img src="" /></div>
+				<div class="shirtdesign"><img src="" /></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Album Modal -->
+		<div id="albumModal" class="modal fade product-modal" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Album</h4>
+			  </div>
+			  <div class="modal-body">
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image1.png)"><img bgsrc="assets/lib/designer/images/album/image1.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image2.png)"><img bgsrc="assets/lib/designer/images/album/image2.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image3.png)"><img bgsrc="assets/lib/designer/images/album/image3.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image4.png)"><img bgsrc="assets/lib/designer/images/album/image4.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image5.png)"><img bgsrc="assets/lib/designer/images/album/image5.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image6.png)"><img bgsrc="assets/lib/designer/images/album/image6.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image7.png)"><img bgsrc="assets/lib/designer/images/album/image7.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image8.png)"><img bgsrc="assets/lib/designer/images/album/image8.png" src="images/blank.png" /></div></a>
+                <a href="#" class="album-item"><div style="background-image: url(images/album/image9.png)"><img bgsrc="assets/lib/designer/images/album/image9.png" src="images/blank.png" /></div></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
 
     <script type="text/javascript" src="assets/lib/designer/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/lib/designer/js/bootstrap.min.js"></script>

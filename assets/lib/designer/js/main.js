@@ -76,7 +76,7 @@ $(function() {
     canvas_back.on('selection:cleared', event_selection_cleared);
     function event_selection_cleared(options) {
         $('.canvas_tool_box', '#rightLayoutContainer').hide();
-        $('.cvtoolbox_info', '#centerLayoutContainer').hide();
+//        $('.cvtoolbox_info', '#centerLayoutContainer').hide();
         $('.texttoolbox', '#rightLayoutContainer').hide();
     };
     
@@ -274,7 +274,7 @@ $(function() {
     $('input[name=form_shirt_type]', '#leftLayoutContainer').on('change', function() {
         var data = '';
         for(var i=0; i<shirtData[this.value]['color'].length; i++){
-            data += '<div class="btn colorButton '+(i==0?'active':'')+'" style="background-color: #'+shirtData[this.value]['color'][i]['color']+';"><input type="radio" name="form_shirt_color" value="'+shirtData[this.value]['color'][i]['id']+'" autocomplete="off" '+(i==0?'checked':'')+' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>';
+            data += '<div class="btn design-btn color-design-btn '+(i==0?'active':'')+'" style="background-color: #'+shirtData[this.value]['color'][i]['color']+';"><input type="radio" name="form_shirt_color" value="'+shirtData[this.value]['color'][i]['id']+'" autocomplete="off" '+(i==0?'checked':'')+' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>';
         }
         
         if (shirtData[this.value]['color'].length < 2) {
@@ -310,7 +310,7 @@ $(function() {
             $('#div_canvas_back').show();
         }
         if (canvas.getActiveObject()) {
-            $('.cvtoolbox', '#centerLayoutContainer').show();
+            $('.canvas_tool_box', '#rightLayoutContainer').show();
             var obj = canvas.getActiveObject();
             if (obj && obj.isType('i-text')) {
                 prepare_texttoolbox(obj);
@@ -319,8 +319,8 @@ $(function() {
                 $('.texttoolbox', '#rightLayoutContainer').hide();
             }
         } else {
-            $('.cvtoolbox', '#centerLayoutContainer').hide();
-            $('.cvtoolbox_info', '#centerLayoutContainer').hide();
+            $('.canvas_tool_box', '#rightLayoutContainer').hide();
+//            $('.cvtoolbox_info', '#centerLayoutContainer').hide();
             $('.texttoolbox', '#rightLayoutContainer').hide();
         }
         change_shirt_color();
@@ -405,8 +405,8 @@ $(function() {
     // preload shirt images
     $.each(shirtData, function(i, d) {
         for (i = 0; i < d.color.length; i++) {
-            new Image().src = 'images/shirts/'+d.filename+'_'+d.color[i].filename+'_front.png';
-            new Image().src = 'images/shirts/'+d.filename+'_'+d.color[i].filename+'_back.png';
+            new Image().src = 'assets/lib/designer/images/shirts/'+d.filename+'_'+d.color[i].filename+'_front.png';
+            new Image().src = 'assets/lib/designer/images/shirts/'+d.filename+'_'+d.color[i].filename+'_back.png';
         }
     })
 
@@ -416,7 +416,7 @@ $(function() {
         var colorID = $('input[name=form_shirt_color]:checked', '#leftLayoutContainer').val();
         var color = $.grep(shirtData[typeID]['color'], function(e){ return e.id == colorID; });
         if (color.length > 0) {
-            $('#img_shirt').attr('src', 'images/shirts/'+shirtData[typeID]['filename']+'_'+color[0]['filename']+'_'+shirtSide+'.png');
+            $('#img_shirt').attr('src', 'assets/lib/designer/images/shirts/'+shirtData[typeID]['filename']+'_'+color[0]['filename']+'_'+shirtSide+'.png');
         }
     }
 
